@@ -1,8 +1,9 @@
 import React from "react";
 import Filtercard from "/src/components/Filtercard";
-import Job from "../components/Job";
+// import Job from '../components/Job';
 import { useSelector } from "react-redux";
 import UseGetAllJob from "/src/Costomhooks/UseGetAllJob";
+import Job from "/src/components/Job";
 
 const Jobs = () => {
   UseGetAllJob();
