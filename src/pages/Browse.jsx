@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import Job from '../components/job';
+// import Job from '../components/Job';
 import { useDispatch, useSelector } from 'react-redux';
 import UseGetAllJob from '/src/Costomhooks/UseGetAllJob';
 import { setsearchjobquery } from '/src/store/JobSlice';
+import Job from '/src/components/Job';
 
 const Browse = () => {
   const dispatch = useDispatch();
