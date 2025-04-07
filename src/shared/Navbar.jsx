@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/UserSlice";
 
@@ -9,6 +9,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "/src/components/avatar";
 import { LogOut, User2 } from "lucide-react";
 
 export default function Navbar() {
+   let navigate = useNavigate();
   const userstore = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const user = userstore.user;
@@ -99,7 +100,11 @@ export default function Navbar() {
                   <div className="flex gap-3 items-center">
                     <LogOut />
                     <Link
-                      onClick={() => dispatch(logout())}
+                      onClick={() => dispatch(logout())
+                        
+                      }
+                      to={"/"}
+                      
                       className="outline-none font-bold cursor-pointer"
                     >
                       Log Out
